@@ -118,6 +118,11 @@ Future work will focus on improving scalability, optimizing interactions with **
 Integrating a Naive Bayes classifier with a generative model like **ChatGPT** presents a novel approach to detecting and classifying web attacks in real-time. By combining automatic detection capabilities with dynamic retraining, the system can not only detect known attacks but also adapt and learn from new threats. This represents a significant advancement in web security, especially against sophisticated and zero-day attacks.
 
 ---
+## Watch the Model Learning Process
+
+[![Watch the video](https://img.youtube.com/vi/TuTHQdZm6Lk/0.jpg)](https://github.com/daletoniris/Web-Application-Firewall-Purple-AI-Paper/blob/main/modelo-aprediendo-de-forma-guiada-chatgpt.mp4)
+
+
 
 ## 8. License
 
