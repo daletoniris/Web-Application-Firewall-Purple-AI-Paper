@@ -51,7 +51,7 @@ The core of our WAF system is a **dual-classifier approach**:
 
 We integrated ChatGPT (GPT-4) from OpenAI as a backup classifier for logs that the Naive Bayes model cannot classify with confidence. The interaction with ChatGPT is structured as a question-answer system, where ChatGPT analyzes a log and returns the appropriate classification (e.g., "SQL injection", "No Attack", etc.).
 
-```
+```python
 import openai
 
 def consult_gpt4(log_line):
