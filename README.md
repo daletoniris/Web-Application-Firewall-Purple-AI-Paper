@@ -42,7 +42,6 @@ The core of our WAF system is a **dual-classifier approach**:
 4. **Feedback Loop**: The classification provided by **ChatGPT** is used to retrain the Naive Bayes model, allowing the WAF to improve its detection capabilities over time.
 5. **Dynamic Learning**: As more logs are processed, the system gradually reduces its dependence on **ChatGPT**, enabling faster and more autonomous detection.
 
----
 
 ## 4. Implementation
 
@@ -52,7 +51,7 @@ The Naive Bayes model was implemented using **scikit-learn**. We chose this algo
 
 ```python
 from sklearn.feature_extraction.text import TfidfVectorizer
-from sklearn.naive_bayes import MultinomialNB```
+from sklearn.naive_bayes import MultinomialNB
 
 # Naive Bayes model training
 vectorizer = TfidfVectorizer(max_features=1000)
@@ -63,6 +62,7 @@ model = MultinomialNB().fit(X, y)
 ### 4.2 Integration with ChatGPT
 We integrated ChatGPT (GPT-4) from OpenAI as a backup classifier for logs that the Naive Bayes model cannot classify with confidence. The interaction with ChatGPT is structured as a question-answer system, where ChatGPT analyzes a log and returns the appropriate classification (e.g., "SQL injection", "No Attack", etc.).
 
+```python
 import openai
 
 def consult_gpt4(log_line):
@@ -77,9 +77,6 @@ def consult_gpt4(log_line):
 
 
 ### Parte 4:
-
-```markdown
----
 
 ### 4.3 Dynamic Retraining
 
