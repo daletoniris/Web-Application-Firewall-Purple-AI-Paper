@@ -120,7 +120,9 @@ Integrating a Naive Bayes classifier with a generative model like **ChatGPT** pr
 ---
 ## Watch the Model Learning Process
 
-[![Watch the video](https://img.youtube.com/vi/TuTHQdZm6Lk/0.jpg)](https://github.com/daletoniris/Web-Application-Firewall-Purple-AI-Paper/blob/main/modelo-aprediendo-de-forma-guiada-chatgpt.mp4)
+[![Watch the video](https://img.youtube.com/vi/YCmbQ6trR48/0.jpg)](https://youtube.com/shorts/YCmbQ6trR48?feature=share)
+
+Click the image above to watch the video on YouTube.
 
 
 
