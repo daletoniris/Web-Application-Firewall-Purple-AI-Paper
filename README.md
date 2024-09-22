@@ -45,8 +45,21 @@ The core of our WAF system is a **dual-classifier approach**:
 
 ## 4. Implementation
 
-# Naive Bayes and ChatGPT Integration for Log Classification
 
+##4.1 Naive Bayes Classification
+The **Naive Bayes** model was implemented using **scikit-learn**. We chose this algorithm for its simplicity and efficiency in text classification tasks. Logs are transformed into vector representations using **TfidfVectorizer**, and the Naive Bayes model is trained with labeled data classifying different types of attacks, including **XSS**, **SQL** **injection**, and **command injection**.
+
+```python
+Copiar código
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.naive_bayes import MultinomialNB
+
+# Naive Bayes model training
+vectorizer = TfidfVectorizer(max_features=1000)
+X = vectorizer.fit_transform(logs)  # logs is a list of text entries
+y = labels  # labels is the list of classifications for each log
+model = MultinomialNB().fit(X, y)
+```
 ## 4.2 Integration with ChatGPT
 
 We integrated ChatGPT (GPT-4) from OpenAI as a backup classifier for logs that the Naive Bayes model cannot classify with confidence. The interaction with ChatGPT is structured as a question-answer system, where ChatGPT analyzes a log and returns the appropriate classification (e.g., "SQL injection", "No Attack", etc.).
