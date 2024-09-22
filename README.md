@@ -52,7 +52,7 @@ The Naive Bayes model was implemented using **scikit-learn**. We chose this algo
 
 ```python
 from sklearn.feature_extraction.text import TfidfVectorizer
-from sklearn.naive_bayes import MultinomialNB
+from sklearn.naive_bayes import MultinomialNB```
 
 # Naive Bayes model training
 vectorizer = TfidfVectorizer(max_features=1000)
