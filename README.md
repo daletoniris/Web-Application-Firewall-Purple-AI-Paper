@@ -46,11 +46,10 @@ The core of our WAF system is a **dual-classifier approach**:
 ## 4. Implementation
 
 
-##4.1 Naive Bayes Classification
+## 4.1 Naive Bayes Classification
 The **Naive Bayes** model was implemented using **scikit-learn**. We chose this algorithm for its simplicity and efficiency in text classification tasks. Logs are transformed into vector representations using **TfidfVectorizer**, and the Naive Bayes model is trained with labeled data classifying different types of attacks, including **XSS**, **SQL** **injection**, and **command injection**.
 
 ```python
-Copiar código
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.naive_bayes import MultinomialNB
 
