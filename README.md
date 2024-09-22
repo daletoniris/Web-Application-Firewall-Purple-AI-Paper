@@ -124,6 +124,11 @@ Integrating a Naive Bayes classifier with a generative model like **ChatGPT** pr
 
 Click the image above to watch the video on YouTube.
 
+## Model Operating Independently After Training
+
+[![Watch the video](https://img.youtube.com/vi/4s4l2X8J6tQ/0.jpg)](https://youtu.be/4s4l2X8J6tQ)
+
+Click the image above to watch the video on YouTube, where the model operates autonomously without relying on ChatGPT after being trained. It only consults ChatGPT when necessary.
 
 
 ## 8. License
