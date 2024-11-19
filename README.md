@@ -130,8 +130,145 @@ Click the image above to watch the video on YouTube.
 
 Click the image above to watch the video on YouTube, where the model operates autonomously without relying on ChatGPT after being trained. It only consults ChatGPT when necessary.
 
+## 8. Run
 
-## 8. License
+This project is an **AI-powered Web Application Firewall (WAF)** designed to detect and classify attacks in real-time using **ChatGPT** and a **Naive Bayes model**.
+
+1\. Features
+------------
+
+-   Simulates multiple attack types: XSS, SQL Injection, Path Traversal, etc.
+-   Classifies attacks using **ChatGPT** and stores patterns in memory.
+-   Trains a **Naive Bayes model** to classify attacks locally without external queries.
+-   Provides real-time monitoring of logs for enhanced security.
+
+* * * * *
+
+2\. Prerequisites
+-----------------
+
+-   **Python 3.7+** installed.
+-   Install required libraries:
+
+   
+
+    `pip install flask requests colorama scikit-learn openai`
+
+-   Add your OpenAI API key in `WAF_TRAIN_GPT.py` and `WAF_POST_GPT_NAIVES.py`.
+
+* * * * *
+
+3\. How to Run
+--------------
+
+### Step 1: Start the Web Server
+
+Run the simulated web application:
+
+
+`python server.py`
+
+It will be available at `http://localhost:5051`.
+
+### Step 2: Simulate Attacks
+
+Launch the attacker script to send random attacks:
+
+
+`python ATTACK.py`
+
+This script sends payloads such as XSS or SQL Injection to the `/login` endpoint every 5 seconds.
+
+### Step 3: Monitor Logs Using AI
+
+Start monitoring logs and classify attacks with ChatGPT:
+
+
+`python WAF_TRAIN_GPT.py`
+
+### Step 4: Train the Naive Bayes Model
+
+Train a Naive Bayes classifier using the classified logs:
+
+
+`python WAF_POST_GPT_NAIVES.py`
+
+The model will classify future logs locally without consulting ChatGPT.
+
+* * * * *
+
+4\. Project Structure
+---------------------
+
+-   **`server.py`**: Simulates the web application and logs incoming requests.
+-   **`ATTACK.py`**: Sends random simulated attacks to the server.
+-   **`WAF_TRAIN_GPT.py`**: Classifies logs using ChatGPT and stores learned patterns.
+-   **`WAF_POST_GPT_NAIVES.py`**: Trains and uses a Naive Bayes model to classify logs locally.
+
+* * * * *
+
+5\. How It Works
+----------------
+
+1.  **Attack Simulation**:
+
+    -   The attacker sends malicious payloads to the web server.
+    -   The server logs all requests.
+2.  **Log Classification**:
+
+    -   `WAF_TRAIN_GPT.py` uses ChatGPT to classify logs and build memory.
+    -   Learned patterns are stored in `memoria.json`.
+3.  **Naive Bayes Training**:
+
+    -   `WAF_POST_GPT_NAIVES.py` trains a Naive Bayes model using the stored memory.
+    -   The model predicts attack types for new logs.
+4.  **Real-time Monitoring**:
+
+    -   Both scripts monitor the log file (`log_waf.log`) in real-time.
+
+* * * * *
+
+6\. Supported Attack Types
+--------------------------
+
+-   **XSS (Cross-site Scripting)**
+-   **SQL Injection**
+-   **Path Traversal**
+-   **Command Injection**
+-   **Remote File Inclusion**
+-   **LDAP Injection**
+-   **Code Injection**
+
+* * * * *
+
+7\. Example Output
+------------------
+
+### ATTACK.py
+
+
+`⚔️ Attacker started. Sending attacks every 5 seconds...
+✖ Attack (SQL Injection) sent: 1' OR '1'='1 | Response Code: 200
+✖ Attack (XSS) sent: <script>alert("XSS")</script> | Response Code: 200`
+
+### WAF_TRAIN_GPT.py
+
+
+`➤ Processing new log line: INFO:werkzeug:127.0.0.1 - - [19/Nov/2024:15:10:35] "POST /login HTTP/1.1" 200 -
+🔍 ChatGPT classified the line as: SQL Injection
+✔ Memory saved successfully.`
+
+### WAF_POST_GPT_NAIVES.py
+
+
+
+`➤ Processing new log line: INFO:werkzeug:127.0.0.1 - - [19/Nov/2024:15:12:40] "POST /login HTTP/1.1" 200 -
+✔ Classified by the model as: XSS
+✔ Memory saved successfully.`
+
+
+
+## 9. License
 
 This work is licensed under the Creative Commons Attribution-NonCommercial 4.0 International License (CC BY-NC 4.0). You are free to:
 
@@ -148,7 +285,8 @@ For more details, visit: [CC BY-NC 4.0 License](https://creativecommons.org/lice
 
 ---
 
-## 9. References
+
+## 10. References
 
 - "Application Layer Security for Modern Web Applications", 2023.
 - "Generative Models in Cybersecurity: A New Approach to Threat Detection", Journal of AI Research, 2024.
