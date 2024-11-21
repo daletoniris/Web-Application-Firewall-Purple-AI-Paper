@@ -130,9 +130,9 @@ Click the image above to watch the video on YouTube.
 
 Click the image above to watch the video on YouTube, where the model operates autonomously without relying on ChatGPT after being trained. It only consults ChatGPT when necessary.
 
-## 8. Run
+## 8. Run:
 
-This project is an **AI-powered Web Application Firewall (WAF)** designed to detect and classify attacks in real-time using **ChatGPT** and a **Naive Bayes model**.
+
 
    1\. Features
    ------------
