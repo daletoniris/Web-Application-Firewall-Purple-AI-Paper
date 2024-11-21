@@ -134,8 +134,8 @@ Click the image above to watch the video on YouTube, where the model operates au
 
 This project is an **AI-powered Web Application Firewall (WAF)** designed to detect and classify attacks in real-time using **ChatGPT** and a **Naive Bayes model**.
 
-1\. Features
-------------
+   1\. Features
+   ------------
 
 -   Simulates multiple attack types: XSS, SQL Injection, Path Traversal, etc.
 -   Classifies attacks using **ChatGPT** and stores patterns in memory.
@@ -144,7 +144,7 @@ This project is an **AI-powered Web Application Firewall (WAF)** designed to det
 
 * * * * *
 
-2\. Prerequisites
+   2\. Prerequisites
 -----------------
 
 -   **Python 3.7+** installed.
@@ -158,7 +158,7 @@ This project is an **AI-powered Web Application Firewall (WAF)** designed to det
 
 * * * * *
 
-3\. How to Run
+   3\. How to Run
 --------------
 
 ### Step 1: Start the Web Server
@@ -197,8 +197,8 @@ The model will classify future logs locally without consulting ChatGPT.
 
 * * * * *
 
-4\. Project Structure
----------------------
+   4\. Project Structure
+   ---------------------
 
 -   **`server.py`**: Simulates the web application and logs incoming requests.
 -   **`ATTACK.py`**: Sends random simulated attacks to the server.
@@ -207,8 +207,8 @@ The model will classify future logs locally without consulting ChatGPT.
 
 * * * * *
 
-5\. How It Works
-----------------
+   5\. How It Works
+   ----------------
 
 1.  **Attack Simulation**:
 
@@ -228,8 +228,8 @@ The model will classify future logs locally without consulting ChatGPT.
 
 * * * * *
 
-6\. Supported Attack Types
---------------------------
+   6\. Supported Attack Types
+   --------------------------
 
 -   **XSS (Cross-site Scripting)**
 -   **SQL Injection**
@@ -241,8 +241,8 @@ The model will classify future logs locally without consulting ChatGPT.
 
 * * * * *
 
-7\. Example Output
-------------------
+   7\. Example Output
+   ------------------
 
 ### ATTACK.py
 
