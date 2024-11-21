@@ -267,21 +267,23 @@ The model will classify future logs locally without consulting ChatGPT.
 ✔ Memory saved successfully.`
 
 
-
 ## 9. License
 
-This work is licensed under the Creative Commons Attribution-NonCommercial 4.0 International License (CC BY-NC 4.0). You are free to:
+This work is licensed under the **Apache License 2.0**. You are free to:
 
-- **Share**: Copy and redistribute the material in any medium or format.
-- **Adapt**: Remix, transform, and build upon the material.
+- **Use**: Utilize the software for personal, educational, or commercial purposes.
+- **Modify**: Adapt, transform, and build upon the material for any purpose.
+- **Distribute**: Share the software and modifications under the same license.
 
 Under the following terms:
 
-- **Attribution**: You must give appropriate credit, provide a link to the license, and indicate if changes were made.
-- **NonCommercial**: You may not use the material for commercial purposes.
-- **Ethical Use**: This work is intended strictly for educational and research purposes in controlled environments, such as penetration testing in a Purple Team context. The use of this work for malicious purposes is strictly prohibited.
+- **Attribution**: You must give appropriate credit, provide a copy of this license, and indicate if changes were made.
+- **No Warranty**: This software is provided "as is," without warranty of any kind, express or implied, including but not limited to the warranties of merchantability or fitness for a particular purpose.
+- **Ethical Use**: This work is intended strictly for lawful and ethical purposes, including educational research, penetration testing, and cybersecurity defense. Any misuse of this software for malicious activities is strictly prohibited and may violate applicable laws.
 
-For more details, visit: [CC BY-NC 4.0 License](https://creativecommons.org/licenses/by-nc/4.0/).
+For more details, see the full license: [Apache License 2.0](http://www.apache.org/licenses/LICENSE-2.0).
+
+
 
 ---
 
